@@ -1,4 +1,4 @@
-class Cliente {
+export class Cliente {
   constructor(nombre, impuesto) {
     if (typeof nombre !== "string") {
       console.warn(
@@ -30,14 +30,3 @@ class Cliente {
     );
   }
 }
-
-const impuestosDeLuis = new Impuestos(100, 5);
-const clienteLuis = new Cliente("Luis", impuestosDeLuis);
-
-const impuestosDeAngela = new Impuestos(300, 15);
-const clienteAngela = new Cliente("Angela", impuestosDeAngela);
-
-const calculoDeLuis = clienteLuis.calcularImpuesto();
-const calculoDeAngela = clienteAngela.calcularImpuesto();
-
-console.log({ calculoDeLuis, calculoDeAngela });
